@@ -8,8 +8,8 @@ WORKDIR /usr/src/app
 
 RUN apt-get upgrade && \
     apt-get install -y --no-install-recommends git && \
-    git clone "https://github.com/home-assistant/home-assistant.git"
-    rm -r /usr/src/docs/ /usr/src/tests/
+    git clone "https://github.com/home-assistant/home-assistant.git" && \
+    rm -r /usr/src/docs/ /usr/src/tests/ && \
     apt-get install -y --no-install-recommends build-essential libxrandr-dev \
                                                nmap net-tools lbcurl3-dev bluetooth libglib2.0-dev libbluetooth-dev && \
     pip3 install --no-cache-dir -r requirements_all.txt && \                         
