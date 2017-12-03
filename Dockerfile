@@ -13,7 +13,7 @@ RUN apt-get upgrade && \
     apt-get install -y --no-install-recommends build-essential libxrandr-dev \
                                                nmap net-tools lbcurl3-dev bluetooth libglib2.0-dev libbluetooth-dev && \
     pip3 install --no-cache-dir -r requirements_all.txt && \                         
-    pip3 install --no-cache-dir psycopg2 uvloop cchardet cython && \
+    pip3 install --no-cache-dir uvloop cchardet cython && \
     apt-get remove -y --purge git build-essential libxrandr-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/src/app/build/
