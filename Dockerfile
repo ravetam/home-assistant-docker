@@ -1,23 +1,14 @@
-FROM python:3.6.3-slim-stretch
+FROM python:3.6.3-alpine3.6
 LABEL maintainer="Lazcad <support@lazcad.com>"
 
 VOLUME /config
+WORKDIR /app
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+RUN apk add --no-cache --update gcc musl-dev linux-headers nmap libsodium nmap curl ffmpeg && \
+    rm -rf /root/.cache /var/cache/apk/*
 
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends wget && \
-    wget "https://github.com/home-assistant/home-assistant/archive/0.58.1.tar.gz" && \
-    tar -xvf 0.58.1.tar.gz && \
-    mv home-assistant-0.58.1/* . && \
-    rm -rf 0.58.1.tar.gz home-assistant-0.58.1/ docs/ tests/ && \
-    apt-get install -y --no-install-recommends build-essential libxrandr-dev \
-                                               nmap net-tools libcurl3-dev bluetooth libglib2.0-dev libbluetooth-dev && \
-    pip3 install --no-cache-dir -r requirements_all.txt && \                         
-    pip3 install --no-cache-dir uvloop cchardet cython && \
-    apt-get remove -y --purge wget build-essential libxrandr-dev && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/src/app/build/
+RUN pip3 install --no-cache-dir --upgrade homeassistant
 
-CMD [ "python", "-m", "homeassistant", "--config", "/config" ]
+EXPOSE 8123
+
+CMD [ "hass", "--config", "/config" ]
