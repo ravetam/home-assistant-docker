@@ -7,9 +7,10 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends git && \
-    git clone -b master "https://github.com/home-assistant/home-assistant.git" /usr/src/app && \
-    rm -r /usr/src/app/docs/ /usr/src/app/tests/ /usr/src/app/.git/ && \
+    wget "https://github.com/home-assistant/home-assistant/archive/0.58.1.tar.gz" && \
+    tar -xvf 0.58.1.tar.gz && \
+    mv home-assistant-0.58.1/* . && \
+    rm -rf 0.58.1.tar.gz home-assistant-0.58.1/ docs/ tests/ && \
     apt-get install -y --no-install-recommends build-essential libxrandr-dev \
                                                nmap net-tools libcurl3-dev bluetooth libglib2.0-dev libbluetooth-dev && \
     pip3 install --no-cache-dir -r requirements_all.txt && \                         
