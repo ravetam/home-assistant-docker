@@ -11,7 +11,7 @@ RUN apt-get update && \
     git clone -b master "https://github.com/home-assistant/home-assistant.git" /usr/src/app && \
     rm -r /usr/src/app/docs/ /usr/src/app/tests/ /usr/src/app/.git/ && \
     apt-get install -y --no-install-recommends build-essential libxrandr-dev \
-                                               nmap net-tools lbcurl3-dev bluetooth libglib2.0-dev libbluetooth-dev && \
+                                               nmap net-tools libcurl3-dev bluetooth libglib2.0-dev libbluetooth-dev && \
     pip3 install --no-cache-dir -r requirements_all.txt && \                         
     pip3 install --no-cache-dir uvloop cchardet cython && \
     apt-get remove -y --purge git build-essential libxrandr-dev && \
