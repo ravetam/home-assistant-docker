@@ -7,7 +7,7 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends wget
+    apt-get install -y --no-install-recommends wget && \
     wget "https://github.com/home-assistant/home-assistant/archive/0.58.1.tar.gz" && \
     tar -xvf 0.58.1.tar.gz && \
     mv home-assistant-0.58.1/* . && \
