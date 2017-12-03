@@ -6,7 +6,7 @@ VOLUME /config
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-RUN apt-get upgrade && \
+RUN apt-get update && \
     apt-get install -y --no-install-recommends git && \
     git clone "https://github.com/home-assistant/home-assistant.git" && \
     rm -r /usr/src/docs/ /usr/src/tests/ && \
