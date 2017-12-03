@@ -5,6 +5,7 @@ VOLUME /config
 WORKDIR /app
 
 RUN apk add --no-cache --update bash gcc musl-dev linux-headers nmap libsodium nmap curl ffmpeg && \
+    libffi-dev openssl-dev && \
     rm -rf /root/.cache /var/cache/apk/*
 
 RUN pip3 install --no-cache-dir --upgrade homeassistant
