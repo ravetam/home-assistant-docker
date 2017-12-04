@@ -4,7 +4,7 @@ LABEL maintainer="Lazcad <support@lazcad.com>"
 VOLUME /config
 WORKDIR /app
 
-RUN apk add --no-cache --update bash gcc musl-dev linux-headers nmap libsodium nmap curl ffmpeg \
+RUN apk add --no-cache --update bash gcc musl-dev linux-headers nmap libsodium nmap curl \
     libffi-dev openssl-dev && \
     rm -rf /root/.cache /var/cache/apk/*
 
