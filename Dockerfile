@@ -12,6 +12,6 @@ RUN pip3 install --no-cache-dir --upgrade homeassistant
 RUN pip3 install --no-cache-dir --upgrade aiohttp_cors distro future fuzzywuzzy gTTS-token home-assistant-frontend \
                                           mutagen netdisco sleekxmpp sqlalchemy xmltodict zeroconf colorlog \
                                           plexapi pyharmony PyXiaomiGateway SoCo yeelight broadlink python-miio coinmarketcap yahooweather \
-                                          phue pyown slacker
+                                          phue pyowm slacker
 
 CMD [ "hass", "--config", "/config" ]
