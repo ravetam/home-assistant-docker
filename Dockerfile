@@ -7,7 +7,7 @@ VOLUME /config
 #    libffi-dev openssl-dev && \
 #    rm -rf /root/.cache /var/cache/apk/*
 
-RUN apt-get upgrade && \
+RUN apt-get update && \
     apt-get install -y --no-install-recommends build-essential libffi-dev openssl-dev nmap net-tools libcurl3-dev && \
     pip3 install --no-cache-dir --upgrade homeassistant && \
     pip3 install --no-cache-dir --upgrade aiohttp_cors distro future fuzzywuzzy \ 
