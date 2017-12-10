@@ -3,10 +3,6 @@ LABEL maintainer="Lazcad <support@lazcad.com>"
 
 VOLUME /config
 
-#RUN apk add --no-cache --update bash gcc musl-dev linux-headers nmap libsodium nmap curl \
-#    libffi-dev openssl-dev && \
-#    rm -rf /root/.cache /var/cache/apk/*
-
 RUN apt-get update && \
     apt-get install -y --no-install-recommends build-essential libffi-dev libssl-dev nmap net-tools libcurl3-dev && \
     pip3 install --no-cache-dir --upgrade homeassistant && \
