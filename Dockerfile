@@ -9,7 +9,7 @@ RUN apk add --no-cache --update bash gcc musl-dev linux-headers nmap libsodium n
     rm -rf /root/.cache /var/cache/apk/*
 
 RUN pip3 install --no-cache-dir --upgrade homeassistant==0.59.1
-RUN pip3 install --no-cache-dir --upgrade aiohttp_cors distro future fuzzywuzzy baidu-aip==1.6.6 \ 
+RUN pip3 install --no-cache-dir --upgrade aiohttp_cors distro future fuzzywuzzy \ 
                                           home-assistant-frontend==20171204.0 user-agents==1.1.0 \
                                           mutagen netdisco sleekxmpp sqlalchemy xmltodict zeroconf colorlog==3.0.1 \
                                           plexapi pyharmony PyXiaomiGateway SoCo==0.12 yeelight broadlink==0.5 python-miio coinmarketcap \
