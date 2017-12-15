@@ -10,7 +10,11 @@ RUN apt-get update && \
                                           home-assistant-frontend==20171204.0 user-agents==1.1.0 \
                                           mutagen netdisco sleekxmpp sqlalchemy xmltodict zeroconf colorlog==3.0.1 \
                                           plexapi pyharmony PyXiaomiGateway SoCo==0.12 yeelight broadlink==0.5 python-miio==0.3.2 \
-                                          coinmarketcap phue yahooweather pyowm slacker feedparser python-nmap==0.6.1 && \
-    apt-get purge -y --auto-remove build-essential libffi-dev libssl-dev libcurl3-dev
+                                          coinmarketcap phue yahooweather pyowm slacker feedparser python-nmap==0.6.1 \
+                                          libttspico-utils && \
+    apt-get purge -y --auto-remove build-essential libffi-dev libssl-dev libcurl3-dev && \
+    rm -rf /var/lib/apt/lists/*
+
+EXPOSE 8123
 
 CMD [ "hass", "--config", "/config" ]
