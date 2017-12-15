@@ -3,6 +3,7 @@ LABEL maintainer="Lazcad <support@lazcad.com>"
 
 VOLUME /config
 
+RUN echo "deb http://deb.debian.org/debian stretch non-free" >> /etc/apt/sources.list.d/debian-nonfree.list
 RUN apt-get update && \
     apt-get install -y --no-install-recommends build-essential libffi-dev libssl-dev nmap net-tools libcurl3-dev && \
     pip3 install --no-cache-dir --upgrade homeassistant && \
