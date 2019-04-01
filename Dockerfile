@@ -13,7 +13,7 @@ RUN apk add --no-cache --update bash gcc musl-dev linux-headers curl libssl1.0 \
                                           zeroconf==0.21.3 colorlog==4.0.2 pysonos==0.0.8 plexapi==3.0.6 PyXiaomiGateway==0.12.2 \
                                           python-miio==0.4.4 yeelight==0.4.3 broadlink==0.9.0 coinmarketcap==5.0.3 aiohue==1.9.1 \
                                           yahooweather==0.10 pyowm==2.10.0 slacker==0.12.0 feedparser-homeassistant==5.2.2.dev1 construct==2.9.45 \
-                                          PyQRCode==1.2.1 aioharmony==0.1.8 &&\
+                                          PyQRCode==1.2.1 pyotp==2.2.6 aioharmony==0.1.8 &&\
     apk del gcc musl-dev linux-headers curl libffi-dev openssl-dev
 
 EXPOSE 8123
