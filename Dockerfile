@@ -7,7 +7,7 @@ RUN apk add --no-cache --update bash gcc musl-dev linux-headers curl libssl1.0 m
     libffi-dev openssl-dev && \
     rm -rf /root/.cache /var/cache/apk/* && \
     pip3 install --no-cache-dir --upgrade homeassistant \
-                                          PyMySQL \
+                                          PyMySQL PyNaCl==1.3.0 \
                                           aiohttp_cors==0.7.0 distro==1.4.0 \ 
                                           home-assistant-frontend==20190331.0 \
                                           mutagen==1.42.0 netdisco==2.5.0 slixmpp==1.4.2 sqlalchemy==1.3.0 xmltodict==0.11.0 \
