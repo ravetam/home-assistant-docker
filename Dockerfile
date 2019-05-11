@@ -15,7 +15,7 @@ RUN apk add --no-cache --update bash gcc musl-dev linux-headers curl make libffi
                                           yahooweather==0.10 pyowm==2.10.0 slacker==0.12.0 feedparser-homeassistant==5.2.2.dev1 \
                                           construct==2.9.45 paho-mqtt==1.4.0 alpha_vantage==2.1.0 \
                                           PyQRCode==1.2.1 pyotp==2.2.6 aioesphomeapi==2.0.1 python-forecastio==1.4.0 \
-                                          wakeonlan==1.1.6 aioftp==0.12.0 PyNaCl==1.3.0 baidu-aip-1.6.6 \
+                                          wakeonlan==1.1.6 aioftp==0.12.0 PyNaCl==1.3.0 baidu-aip==1.6.6 \
                                           workalendar && \
     apk del gcc musl-dev linux-headers curl libffi-dev openssl-dev libjpeg-turbo-dev zlib-dev make
 
