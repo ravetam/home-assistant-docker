@@ -5,12 +5,12 @@ VOLUME /config
 RUN apk add --no-cache --update bash gcc musl-dev linux-headers curl make libffi-dev openssl-dev libjpeg-turbo-dev zlib-dev \
     libssl1.0 && \
     rm -rf /root/.cache /var/cache/apk/* && \
-    pip3 install --no-cache-dir --upgrade homeassistant==0.96.3 \
+    pip3 install --no-cache-dir --upgrade homeassistant==0.98.1 \
                                           PyMySQL \
                                           aiohttp_cors==0.7.0 distro==1.4.0 \ 
-                                          home-assistant-frontend==20190721.0\
-                                          mutagen==1.42.0 netdisco==2.6.0 slixmpp==1.4.2 sqlalchemy==1.3.5 xmltodict==0.12.0 \
-                                          zeroconf==0.23.0 colorlog==4.0.2 pysonos==0.0.21 plexapi==3.0.6 PyXiaomiGateway==0.12.3 \
+                                          home-assistant-frontend==20190828.0 \
+                                          mutagen==1.42.0 netdisco==2.6.0 slixmpp==1.4.2 sqlalchemy==1.3.7 xmltodict==0.12.0 \
+                                          zeroconf==0.23.0 colorlog==4.0.2 pysonos==0.0.23 plexapi==3.0.6 PyXiaomiGateway==0.12.4 \
                                           python-miio==0.4.5 yeelight==0.5.0 broadlink==0.11.1 coinmarketcap==5.0.3 aiohue==1.9.1 \
                                           pyowm==2.10.0 slacker==0.13.0 feedparser-homeassistant==5.2.2.dev1 \
                                           construct==2.9.45 paho-mqtt==1.4.0 alpha_vantage==2.1.0 \
