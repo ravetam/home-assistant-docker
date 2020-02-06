@@ -3,7 +3,7 @@ LABEL maintainer="Lazcad <support@lazcad.com>"
 
 VOLUME /config
 RUN apk add --no-cache --update bash gcc musl-dev linux-headers curl make libffi-dev openssl-dev libjpeg-turbo-dev zlib-dev \
-    libssl1.0  libxml2-dev libxslt-dev && \
+    libssl1.0  libxml2-dev libxslt libxslt-dev && \
     rm -rf /root/.cache /var/cache/apk/* && \
     pip3 install --no-cache-dir --upgrade homeassistant==0.105.1 \
                                           PyMySQL \
