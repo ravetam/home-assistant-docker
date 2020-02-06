@@ -3,7 +3,7 @@ LABEL maintainer="Lazcad <support@lazcad.com>"
 
 VOLUME /config
 RUN apk add --no-cache --update bash gcc musl-dev linux-headers curl make libffi-dev openssl-dev libjpeg-turbo-dev zlib-dev \
-    libssl1.0 && \
+    libssl1.0  libxml2-dev libxslt-dev && \
     rm -rf /root/.cache /var/cache/apk/* && \
     pip3 install --no-cache-dir --upgrade homeassistant==0.105.1 \
                                           PyMySQL \
@@ -17,7 +17,7 @@ RUN apk add --no-cache --update bash gcc musl-dev linux-headers curl make libffi
                                           PyQRCode==1.2.1 pyotp==2.3.0 aioesphomeapi==2.6.1 python-forecastio==1.4.0 \
                                           wakeonlan==1.1.6 aioftp==0.12.0 PyNaCl==1.3.0 influxdb==5.2.3 hass-nabucasa==0.31 \
                                           caldav==0.6.1 workalendar && \
-    apk del gcc musl-dev linux-headers curl libffi-dev openssl-dev libjpeg-turbo-dev zlib-dev make
+    apk del gcc musl-dev linux-headers curl libffi-dev openssl-dev libjpeg-turbo-dev zlib-dev libxml2-dev libxslt-dev make
 
 EXPOSE 8123
 
