@@ -16,7 +16,7 @@ RUN apk add --no-cache --update bash gcc musl-dev linux-headers curl make libffi
                                           construct==2.9.45 paho-mqtt==1.5.0 hbmqtt==0.9.5 alpha_vantage==2.1.3 \
                                           PyQRCode==1.2.1 pyotp==2.3.0 aioesphomeapi==2.6.1 python-forecastio==1.4.0 \
                                           wakeonlan==1.1.6 aioftp==0.12.0 PyNaCl==1.3.0 influxdb==5.2.3 hass-nabucasa==0.34.1 \
-                                          caldav==0.6.1 workalendar && \
+                                          HAP-python==2.8.2 caldav==0.6.1 workalendar && \
     apk del gcc musl-dev linux-headers curl libffi-dev openssl-dev libjpeg-turbo-dev zlib-dev libxml2-dev libxslt-dev make
 
 EXPOSE 8123
