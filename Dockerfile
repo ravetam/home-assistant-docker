@@ -5,7 +5,7 @@ VOLUME /config
 RUN apk add --no-cache --update bash gcc musl-dev linux-headers curl make libffi-dev openssl-dev libjpeg-turbo-dev zlib-dev \
     libssl1.0  libxml2-dev libxslt libxslt-dev && \
     rm -rf /root/.cache /var/cache/apk/* && \
-    pip3 install --no-cache-dir --upgrade homeassistant==0.110.4 \
+    pip3 install --no-cache-dir --upgrade homeassistant==0.110.3 \
                                           PyMySQL \
                                           aiohttp_cors==0.7.0 distro==1.5.0 \ 
                                           home-assistant-frontend==20200519.5 \
