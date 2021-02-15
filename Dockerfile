@@ -1,4 +1,4 @@
-FROM python:3.7.1-alpine3.8
+FROM python:3.9.1-alpine3.13
 LABEL maintainer="Lazcad <support@lazcad.com>"
 
 VOLUME /config
