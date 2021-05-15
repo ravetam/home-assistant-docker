@@ -21,7 +21,7 @@ RUN pip3 install --no-cache-dir --upgrade homeassistant==2021.5.4 \
                                           PyQRCode==1.2.1 pyotp==2.3.0 aioesphomeapi==2.6.6 python-forecastio==1.4.0 \
                                           wakeonlan==2.0.1 aioftp==0.12.0 PyNaCl==1.3.0 influxdb-client==1.14.0 influxdb==5.2.3 hass-nabucasa==0.43.0 \
                                           HAP-python==3.4.1 beautifulsoup4==4.9.3 blockchain==1.4.4 jsonpath==0.82 \
-                                          sonarr==0.3.0 pynzbgetapi==0.2.0 av==8.0.3 pymsteams==0.1.12 \\
+                                          sonarr==0.3.0 pynzbgetapi==0.2.0 av==8.0.3 pymsteams==0.1.12 \
                                           caldav==0.7.1 workalendar zeep[async]==4.0.0 WSDiscovery==2.0.0 onvif-zeep-async==1.0.0
 
 EXPOSE 8123
