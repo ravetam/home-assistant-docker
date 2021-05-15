@@ -3,7 +3,7 @@ LABEL maintainer="Lazcad <support@lazcad.com>"
 
 VOLUME /config
 ENV CRYPTOGRAPHY_ALLOW_OPENSSL_102 1
-RUN apk add --no-cache --update bash gcc musl-dev linux-headers curl make libffi-dev openssl-dev libjpeg-turbo-dev zlib-dev \
+RUN apk add --no-cache --update bash git gcc musl-dev linux-headers curl make libffi-dev openssl-dev libjpeg-turbo-dev zlib-dev \
     libssl1.1  libxml2-dev libxslt libxslt-dev ffmpeg && \
     rm -rf /root/.cache /var/cache/apk/*
 
