@@ -23,7 +23,7 @@ RUN pip3 install --no-cache-dir --upgrade homeassistant==2021.5.5 \
                                           HAP-python==3.4.1 beautifulsoup4==4.9.3 blockchain==1.4.4 jsonpath==0.82 \
                                           sonarr==0.3.0 pynzbgetapi==0.2.0 pymsteams==0.1.12 \
                                           caldav==0.7.1 workalendar zeep[async]==4.0.0 WSDiscovery==2.0.0 \
-                                          git+https://github.com/ravetam/python-onvif-zeep-async.git#egg=onvif-zeep-async
+                                          git+https://github.com/tam-wh/python-onvif-zeep-async.git#egg=onvif-zeep-async
 
                                           # av==8.0.3  not possible on alpine
 
